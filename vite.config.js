@@ -7,8 +7,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   // ------------------------------------------------------------------
-  //  ADD THIS LINE
-  //  Set the base path to your repository name (including the leading and trailing slashes)
-  base: '/Ashu/',
+  // CHANGE THIS LINE to a relative path
+  base: './', 
   // ------------------------------------------------------------------
 })
