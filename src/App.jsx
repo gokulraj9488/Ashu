@@ -145,7 +145,6 @@ function App() {
             margin: 0;
             padding: 0;
             
-            /* FIX: CHANGED TO RELATIVE PATH './' */
             background-image: url('./white-paper-texture.jpg'); 
             
             /* FIX FOR ZOMMED/TILED BACKGROUND ON MOBILE */
@@ -170,9 +169,9 @@ function App() {
         .collage-container {
             position: relative; 
             
-            width: 380px;        
-            height: 500px;       
-            max-width: 90vw;    
+            width: 380px;        
+            height: 500px;       
+            max-width: 90vw;    
 
             margin: 0; 
             text-align: initial;
@@ -202,32 +201,32 @@ function App() {
 
         /* Mobile: Photo 1 (Top) */
         .photo-1 {
-            top: 5%;           
-            left: 5%;          
+            top: 5%;           
+            left: 5%;          
             transform: rotate(-10deg) translateZ(1px); 
             z-index: 20; 
         }
 
         /* Mobile: Photo 2 */
         .photo-2 {
-            top: 25%;           
-            right: 5%;          
+            top: 25%;           
+            right: 5%;          
             transform: rotate(15deg) translateZ(1px); 
             z-index: 18;
         }
 
         /* Mobile: Photo 3 */
         .photo-3 {
-            top: 55%;           
-            left: 0;            
+            top: 55%;           
+            left: 0;            
             transform: rotate(-5deg) translateZ(1px); 
             z-index: 15;
         }
 
         /* Mobile: Photo 4 (Bottom) */
         .photo-4 {
-            top: 75%;         
-            right: 10%;         
+            top: 75%;         
+            right: 10%;         
             border: 10px solid black; 
             transform: rotate(10deg) translateZ(1px); 
             z-index: 12;
@@ -330,8 +329,8 @@ function App() {
             opacity: 0; 
             /* Radial movement: O-direction, pushed far off-screen */
             transform: translate(var(--travel-x), var(--travel-y)) 
-                        scale(1.2) 
-                        rotate(var(--rotation)); 
+                       scale(1.2) 
+                       rotate(var(--rotation)); 
           }
         }
       `}
@@ -350,7 +349,7 @@ function App() {
         
         {/* Photo 1: Event Handlers Added */}
         <img 
-          src="./1.jpg" // FIXED: Changed to relative path
+          src="./1.jpg" 
           alt="Collage Photo 1" 
           className="photo photo-1" 
           onMouseEnter={handlePhotoInteraction}
@@ -360,7 +359,7 @@ function App() {
         
         {/* Photo 2: Event Handlers Added */}
         <img 
-          src="./2.jpg" // FIXED: Changed to relative path
+          src="./2.jpg" 
           alt="Collage Photo 2" 
           className="photo photo-2" 
           onMouseEnter={handlePhotoInteraction}
@@ -370,7 +369,7 @@ function App() {
         
         {/* Photo 3: Event Handlers Added */}
         <img 
-          src="./3.jpg" // FIXED: Changed to relative path
+          src="./3.jpg" 
           alt="Collage Photo 3" 
           className="photo photo-3" 
           onMouseEnter={handlePhotoInteraction}
@@ -380,7 +379,7 @@ function App() {
         
         {/* Photo 4: Event Handlers Added */}
         <img 
-          src="./4.jpg" // FIXED: Changed to relative path
+          src="./4.jpg" 
           alt="Collage Photo 4" 
           className="photo photo-4" 
           onMouseEnter={handlePhotoInteraction}
