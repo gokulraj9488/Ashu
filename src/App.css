@@ -1,0 +1,170 @@
+/* --- src/App.css: FINAL VERSION with FOUR PHOTOS MOVED RIGHT ON DESKTOP --- */
+
+/* ================================================= */
+/* 1. GLOBAL & BACKGROUND STYLES (Applies to ALL Screens) */
+/* ================================================= */
+
+/* Ensure HTML is set correctly */
+html {
+    height: 100%;
+    width: 100%;
+}
+
+/* Reset for the document body */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: transparent; 
+    color: #333; 
+    overflow-x: hidden; /* Fixes swiping/horizontal scroll */
+    height: 100%;
+}
+
+/* The root div where React mounts */
+#root {
+    background-color: transparent;
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+/* The main app container (Full-page background) */
+.app-container {
+    width: 100vw;
+    min-height: 100vh; 
+    margin: 0;
+    padding: 0;
+    
+    background-image: url('/white-paper-texture.jpg'); 
+    background-repeat: repeat;
+    background-size: auto; 
+    
+    /* FLEXBOX CENTERING: Centers the collage on ALL screen sizes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ================================================= */
+/* 2. MOBILE / DEFAULT LAYOUT (Applies up to 1023px) */
+/* ================================================= */
+
+.collage-container {
+    position: relative; 
+    
+    /* Size for a tighter vertical stack on mobile */
+    width: 380px;        
+    height: 500px;       
+    max-width: 90vw;    
+
+    margin: 0; 
+    text-align: initial;
+}
+
+/* Basic styling for all photo elements (Polaroid look) */
+.photo {
+    position: absolute; 
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
+    border: 10px solid white; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); 
+    transition: transform 0.3s ease; 
+    z-index: 10;
+}
+
+/* Hover effect */
+.photo:hover {
+    transform: scale(1.08) rotate(0deg) !important; 
+    z-index: 100; 
+    cursor: pointer;
+}
+
+
+/* Mobile: Photo 1 (Top) */
+.photo-1 {
+    top: 5%;           
+    left: 5%;          
+    transform: rotate(-10deg);
+    z-index: 20; 
+}
+
+/* Mobile: Photo 2 */
+.photo-2 {
+    top: 25%;           
+    right: 5%;          
+    transform: rotate(15deg);
+}
+
+/* Mobile: Photo 3 */
+.photo-3 {
+    top: 55%;           
+    left: 0;            
+    transform: rotate(-5deg); 
+    z-index: 15;
+}
+
+/* Mobile: Photo 4 (Bottom) */
+.photo-4 {
+    top: 75%;         
+    right: 10%;         
+    border: 10px solid black; 
+    transform: rotate(10deg); 
+}
+
+
+/* ================================================= */
+/* 3. DESKTOP LAYOUT (Applies to screens 1024px and wider) */
+/* ================================================= */
+
+@media (min-width: 1024px) {
+    
+    /* Adjust the container for a wide, spread-out layout */
+    .collage-container {
+        width: 700px;
+        height: 500px;
+        max-width: 90vw;
+    }
+
+    /* Photo 1: Top Left */
+    .photo-1 {
+        top: 0;
+        left: 0;
+        transform: rotate(-10deg);
+        z-index: 20;
+    }
+
+    /* Photo 2: Top Right */
+    .photo-2 {
+        top: 50px; 
+        right: 0; 
+        transform: rotate(15deg);
+        z-index: 18;
+    }
+
+    /* Photo 3: Bottom Center */
+    .photo-3 {
+        top: auto; 
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%) rotate(5deg);
+        z-index: 15;
+    }
+
+    /* Photo 4: Bottom Right (POSITION UPDATED) */
+    .photo-4 {
+        display: block; 
+        top: auto; 
+        bottom: 20px; 
+        
+        /* SHIFTED TO THE RIGHT */
+        left: auto; 
+        right: 50px; 
+        
+        transform: rotate(-5deg); 
+        z-index: 12;
+        border: 10px solid black; 
+    }
+}
