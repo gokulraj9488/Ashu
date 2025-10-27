@@ -82,7 +82,8 @@ Error generating stack: `+u.message+`
             margin: 0;
             padding: 0;
             
-            background-image: url('/white-paper-texture.jpg'); 
+            /* FIX: CHANGED TO RELATIVE PATH './' */
+            background-image: url('./white-paper-texture.jpg'); 
             
             /* FIX FOR ZOMMED/TILED BACKGROUND ON MOBILE */
             background-repeat: no-repeat;
@@ -106,9 +107,9 @@ Error generating stack: `+u.message+`
         .collage-container {
             position: relative; 
             
-            width: 380px;        
-            height: 500px;       
-            max-width: 90vw;    
+            width: 380px;        
+            height: 500px;       
+            max-width: 90vw;    
 
             margin: 0; 
             text-align: initial;
@@ -138,32 +139,32 @@ Error generating stack: `+u.message+`
 
         /* Mobile: Photo 1 (Top) */
         .photo-1 {
-            top: 5%;           
-            left: 5%;          
+            top: 5%;           
+            left: 5%;          
             transform: rotate(-10deg) translateZ(1px); 
             z-index: 20; 
         }
 
         /* Mobile: Photo 2 */
         .photo-2 {
-            top: 25%;           
-            right: 5%;          
+            top: 25%;           
+            right: 5%;          
             transform: rotate(15deg) translateZ(1px); 
             z-index: 18;
         }
 
         /* Mobile: Photo 3 */
         .photo-3 {
-            top: 55%;           
-            left: 0;            
+            top: 55%;           
+            left: 0;            
             transform: rotate(-5deg) translateZ(1px); 
             z-index: 15;
         }
 
         /* Mobile: Photo 4 (Bottom) */
         .photo-4 {
-            top: 75%;         
-            right: 10%;         
+            top: 75%;         
+            right: 10%;         
             border: 10px solid black; 
             transform: rotate(10deg) translateZ(1px); 
             z-index: 12;
@@ -266,8 +267,8 @@ Error generating stack: `+u.message+`
             opacity: 0; 
             /* Radial movement: O-direction, pushed far off-screen */
             transform: translate(var(--travel-x), var(--travel-y)) 
-                       scale(1.2) 
-                       rotate(var(--rotation)); 
+                        scale(1.2) 
+                        rotate(var(--rotation)); 
           }
         }
-      `}),$l.jsx("div",{className:"app-container",children:$l.jsxs("div",{className:"collage-container",children:[_&&$l.jsx(e1,{emojis:u1,sourceRect:_},$),$l.jsx("img",{src:"/1.jpg",alt:"Collage Photo 1",className:"photo photo-1",onMouseEnter:U,onMouseLeave:G,onTouchStart:U}),$l.jsx("img",{src:"/2.jpg",alt:"Collage Photo 2",className:"photo photo-2",onMouseEnter:U,onMouseLeave:G,onTouchStart:U}),$l.jsx("img",{src:"/3.jpg",alt:"Collage Photo 3",className:"photo photo-3",onMouseEnter:U,onMouseLeave:G,onTouchStart:U}),$l.jsx("img",{src:"/4.jpg",alt:"Collage Photo 4",className:"photo photo-4",onMouseEnter:U,onMouseLeave:G,onTouchStart:U})]})})]})}a1.createRoot(document.getElementById("root")).render($l.jsx(ze.StrictMode,{children:$l.jsx(n1,{})}));
+      `}),$l.jsx("div",{className:"app-container",children:$l.jsxs("div",{className:"collage-container",children:[_&&$l.jsx(e1,{emojis:u1,sourceRect:_},$),$l.jsx("img",{src:"./1.jpg",alt:"Collage Photo 1",className:"photo photo-1",onMouseEnter:U,onMouseLeave:G,onTouchStart:U}),$l.jsx("img",{src:"./2.jpg",alt:"Collage Photo 2",className:"photo photo-2",onMouseEnter:U,onMouseLeave:G,onTouchStart:U}),$l.jsx("img",{src:"./3.jpg",alt:"Collage Photo 3",className:"photo photo-3",onMouseEnter:U,onMouseLeave:G,onTouchStart:U}),$l.jsx("img",{src:"./4.jpg",alt:"Collage Photo 4",className:"photo photo-4",onMouseEnter:U,onMouseLeave:G,onTouchStart:U})]})})]})}a1.createRoot(document.getElementById("root")).render($l.jsx(ze.StrictMode,{children:$l.jsx(n1,{})}));
